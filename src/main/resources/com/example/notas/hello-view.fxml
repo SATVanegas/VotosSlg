@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller ="com.example.notas.HelloController">
+    <children>
+        <Button fx:id="Vt1" layoutX="169.0" layoutY="212.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="188.0" text="01">
+            <graphic>
+                <ImageView fitHeight="250.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Luisa.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="Vt2" layoutX="504.0" layoutY="212.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="188.0" text="02">
+            <graphic>
+                <ImageView fitHeight="250.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@cindy.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="Vt3" layoutX="839.0" layoutY="212.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="188.0" text="03">
+            <graphic>
+                <ImageView fitHeight="250.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@yeferson.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="Vt4" layoutX="170.0" layoutY="501.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="188.0" text="04">
+            <graphic>
+                <ImageView fitHeight="250.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Luisaf.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="Vt5" layoutX="504.0" layoutY="501.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="188.0" text="05">
+            <graphic>
+                <ImageView fitHeight="250.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Manuela.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button fx:id="Vtb" layoutX="839.0" layoutY="501.0" mnemonicParsing="false" prefHeight="258.0" prefWidth="215.0" text="Blanco">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Label layoutX="169.0" layoutY="156.0" prefHeight="56.0" prefWidth="215.0" text="Luisa Gómez Arango  01" textFill="RED">
+            <font>
+                <Font name="System Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="504.0" layoutY="156.0" prefHeight="56.0" prefWidth="215.0" text="Cindy carolina Ricardo 02" textFill="RED">
+            <font>
+                <Font name="System Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="839.0" layoutY="156.0" prefHeight="56.0" prefWidth="215.0" text="Yeferson  B.  Acevedo   03" textFill="RED">
+            <font>
+                <Font name="System Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="170.0" layoutY="768.0" prefHeight="56.0" prefWidth="215.0" text="Luisa   F.   Jiménez 04" textFill="RED">
+            <font>
+                <Font name="System Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="504.0" layoutY="768.0" prefHeight="56.0" prefWidth="215.0" text="Manuela Castrillón P. 05" textFill="RED">
+            <font>
+                <Font name="System Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="839.0" layoutY="768.0" prefHeight="56.0" prefWidth="215.0" text="Voto en blanco">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Escudo.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="313.0" layoutY="47.0" prefHeight="84.0" prefWidth="667.0" text="Sistema de Votacion SLG">
+            <font>
+                <Font name="System Bold Italic" size="56.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
