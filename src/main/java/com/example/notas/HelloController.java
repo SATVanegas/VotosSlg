@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -28,6 +29,8 @@ public class HelloController {
     private Button Vt5;
     @FXML
     private Button Vtb;
+    @FXML
+    private Button MostrarVotos;
 
     private int votosVt1 = 0;
     private int votosVt2 = 0;
@@ -36,6 +39,13 @@ public class HelloController {
     private int votosVt5 = 0;
     private int votosBlanco = 0;
 
+    public Label Vt01;
+    public Label Vt02;
+    public Label Vt03;
+    public Label Vt04;
+    public Label Vt05;
+    public Label Vt06;
+
     public void initialize() {
         Vt1.setOnAction(e -> onVt1ButtonClick());
         Vt2.setOnAction(e -> onVt2ButtonClick());
@@ -43,94 +53,83 @@ public class HelloController {
         Vt4.setOnAction(e -> onVt4ButtonClick());
         Vt5.setOnAction(e -> onVt5ButtonClick());
         Vtb.setOnAction(e -> onVtbButtonClick());
+        MostrarVotos.setOnAction(e -> onMostrarVotosButtonClick());
+        Vt01.setText("01: " + votosVt1);
+        Vt02.setText("02: " + votosVt2);
+        Vt03.setText("03: " + votosVt3);
+        Vt04.setText("04: " + votosVt4);
+        Vt05.setText("05: " + votosVt5);
+        Vt06.setText("06: " + votosBlanco);
         guardarVotos();
     }
 
     @FXML
+    private void onMostrarVotosButtonClick(){
+        mostrarEtiquetas();
+    }
+    @FXML
     private void onVt1ButtonClick(){
         System.out.println("Hello1");
-        mostrarVentanaEmergente();
+        votosVt1++;
+        guardarVotos();
+        Vt01.setText("01: " + votosVt1);
     }
     @FXML
     private void onVt2ButtonClick(){
         System.out.println("Hello2");
         votosVt2 ++ ;
         guardarVotos();
+        Vt02.setText("01: " + votosVt2);
     }
     @FXML
     private void onVt3ButtonClick(){
         System.out.println("Hello3");
         votosVt3 ++ ;
         guardarVotos();
+        Vt03.setText("01: " + votosVt3);
     }
     @FXML
     private void onVt4ButtonClick(){
         System.out.println("Hello4");
         votosVt4 ++ ;
         guardarVotos();
+        Vt04.setText("01: " + votosVt4);
     }
     @FXML
     private void onVt5ButtonClick(){
         System.out.println("Hello5");
         votosVt5 ++ ;
+        displayMessage("Confirmat","Desea votar por el 05","Gay");
         guardarVotos();
+        Vt05.setText("05: " + votosVt5);
+
+
     }
     @FXML
     private void onVtbButtonClick(){
         System.out.println("Hello6");
         votosBlanco ++ ;
         guardarVotos();
-    }
-
-    private Stage stage;
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
+        Vt06.setText("Blanco: " + votosBlanco);
     }
 
     @FXML
-    private void onAceptarButtonClick() {
-        votosVt1++;
-        guardarVotos();
-        System.out.println("Se ha presionado Aceptar");
-        // Cierra la ventana emergente
-        stage.close();
+    private void mostrarEtiquetas() {
+        Vt01.setVisible(true);
+        Vt03.setVisible(true);
+        Vt04.setVisible(true);
+        Vt05.setVisible(true);
+        Vt06.setVisible(true);
+        Vt02.setVisible(true);
     }
 
-    @FXML
-    private void onCancelarButtonClick() {
-        // Cierra la ventana emergente sin realizar ninguna acción
-        stage.close();
+    public static void displayMessage(String title, String headerText, String content) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(headerText);
+        alert.setContentText(content);
+        alert.showAndWait();;
     }
-
-    @FXML
-    private void mostrarVentanaEmergente() {
-        try {
-            // Carga el archivo FXML de la ventana emergente
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("popup.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Scene scene = new Scene(root);
-
-            // Configura el escenario de la ventana emergente
-            Stage popupStage = new Stage();
-            popupStage.initModality(Modality.APPLICATION_MODAL);
-            popupStage.setTitle("Ventana Emergente");
-            popupStage.setScene(scene);
-
-            // Establece el controlador para la ventana emergente
-            HelloController controller = loader.getController();
-            controller.setStage(popupStage);
-
-            // Muestra la ventana emergente
-            popupStage.showAndWait();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 
     private void guardarVotos() {
         java.lang.String filePath = System.getProperty("user.dir") + "/votos.txt";

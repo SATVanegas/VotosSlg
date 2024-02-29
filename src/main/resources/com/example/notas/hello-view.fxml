@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.notas.HelloController">
     <children>
-        <Button fx:id="Vt1" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="188.0" text="01" onAction="#mostrarVentanaEmergente">
+        <Button fx:id="Vt1" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" prefHeight="250.0" prefWidth="188.0" text="01">
             <graphic>
                 <ImageView fitHeight="250.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -70,8 +70,7 @@
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Button>
-        <Button text="Aceptar" onAction="#onAceptarButtonClick"/>
-        <Button text="Cancelar" onAction="#onCancelarButtonClick"/>
+
         <Label layoutX="14.0" layoutY="156.0" prefHeight="56.0" prefWidth="215.0" text="Luisa Gómez Arango  01" textFill="RED">
             <font>
                 <Font name="System Bold Italic" size="17.0" />
@@ -112,5 +111,12 @@
                 <Font name="System Bold Italic" size="56.0" />
             </font>
         </Label>
+      <Button fx:id="MostrarVotos" layoutX="1213.0" layoutY="625.0" mnemonicParsing="false" text="informe" />
+      <Label fx:id="Vt02" layoutX="493.0" layoutY="333.0" visible="false" />
+      <Label fx:id="Vt03" layoutX="754.0" layoutY="333.0" visible="false" />
+      <Label fx:id="Vt04" layoutX="1018.0" layoutY="333.0" visible="false" />
+      <Label fx:id="Vt05" layoutX="1290.0" layoutY="333.0"  visible="false" />
+      <Label fx:id="Vt01" layoutX="229.0" layoutY="333.0"  visible="false" />
+      <Label fx:id="Vt06" layoutX="760.0" layoutY="565.0" visible="false" />
     </children>
 </Pane>
