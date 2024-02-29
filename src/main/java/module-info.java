@@ -1,6 +1,8 @@
 module com.example.notas {
+    requires javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.base;
 
     requires org.controlsfx.controls;
     requires net.synedra.validatorfx;

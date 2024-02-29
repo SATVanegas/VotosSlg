@@ -66,10 +66,17 @@
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor></Button>
-        <Button fx:id="Vtb" layoutX="539.0" layoutY="484.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="215.0" text="Blanco">
+        <Button fx:id="Vtb" layoutX="576.0" layoutY="520.0" mnemonicParsing="false" prefHeight="178.0" prefWidth="141.0" text="Blanco">
             <cursor>
                 <Cursor fx:constant="HAND" />
-            </cursor></Button>
+            </cursor>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Blanco.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
 
         <Label layoutX="14.0" layoutY="156.0" prefHeight="56.0" prefWidth="215.0" text="Luisa Gómez Arango  01" textFill="RED">
             <font>
@@ -96,11 +103,6 @@
                 <Font name="System Bold Italic" size="17.0" />
             </font>
         </Label>
-        <Label layoutX="574.0" layoutY="650.0" prefHeight="56.0" prefWidth="215.0" text="Voto en blanco">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Label>
         <ImageView fitHeight="134.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Escudo.jpg" />
@@ -111,12 +113,42 @@
                 <Font name="System Bold Italic" size="56.0" />
             </font>
         </Label>
-      <Button fx:id="MostrarVotos" layoutX="1213.0" layoutY="625.0" mnemonicParsing="false" text="informe" />
-      <Label fx:id="Vt02" layoutX="493.0" layoutY="333.0" visible="false" />
-      <Label fx:id="Vt03" layoutX="754.0" layoutY="333.0" visible="false" />
-      <Label fx:id="Vt04" layoutX="1018.0" layoutY="333.0" visible="false" />
-      <Label fx:id="Vt05" layoutX="1290.0" layoutY="333.0"  visible="false" />
-      <Label fx:id="Vt01" layoutX="229.0" layoutY="333.0"  visible="false" />
-      <Label fx:id="Vt06" layoutX="760.0" layoutY="565.0" visible="false" />
+      <Button fx:id="MostrarVotos" layoutX="1150.0" layoutY="586.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="120.0" text="Ver votos" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="Vt02" layoutX="277.0" layoutY="200.0" visible="false">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="Vt03" layoutX="539.0" layoutY="200.0" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="Vt04" layoutX="805.0" layoutY="200.0" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="Vt05" layoutX="1075.0" layoutY="200.0" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="Vt01" layoutX="14.0" layoutY="200.0" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="Vt06" layoutX="585.0" layoutY="527.0" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font></Label>
+      <Button fx:id="CloseMesa" layoutX="1183.0" layoutY="34.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="94.0" text="Cerrar Mesa">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="585.0" layoutY="477.0" prefHeight="56.0" prefWidth="134.0" text="Votos en blanco" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
     </children>
 </Pane>

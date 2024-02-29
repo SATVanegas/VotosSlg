@@ -2,5 +2,5 @@ vt1 = 0
 vt2 = 0
 vt3 = 0
 vt4 = 0
-vt5 = 1
+vt5 = 0
 votos en blanco = 0
