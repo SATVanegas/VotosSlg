@@ -1,11 +1,17 @@
 package com.example.notas;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import java.io.IOException;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class HelloController {
     @FXML
@@ -43,8 +49,7 @@ public class HelloController {
     @FXML
     private void onVt1ButtonClick(){
         System.out.println("Hello1");
-        votosVt1 ++ ;
-        guardarVotos();
+        mostrarVentanaEmergente();
     }
     @FXML
     private void onVt2ButtonClick(){
@@ -76,6 +81,55 @@ public class HelloController {
         votosBlanco ++ ;
         guardarVotos();
     }
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void onAceptarButtonClick() {
+        votosVt1++;
+        guardarVotos();
+        System.out.println("Se ha presionado Aceptar");
+        // Cierra la ventana emergente
+        stage.close();
+    }
+
+    @FXML
+    private void onCancelarButtonClick() {
+        // Cierra la ventana emergente sin realizar ninguna acción
+        stage.close();
+    }
+
+    @FXML
+    private void mostrarVentanaEmergente() {
+        try {
+            // Carga el archivo FXML de la ventana emergente
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("popup.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Scene scene = new Scene(root);
+
+            // Configura el escenario de la ventana emergente
+            Stage popupStage = new Stage();
+            popupStage.initModality(Modality.APPLICATION_MODAL);
+            popupStage.setTitle("Ventana Emergente");
+            popupStage.setScene(scene);
+
+            // Establece el controlador para la ventana emergente
+            HelloController controller = loader.getController();
+            controller.setStage(popupStage);
+
+            // Muestra la ventana emergente
+            popupStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     private void guardarVotos() {
